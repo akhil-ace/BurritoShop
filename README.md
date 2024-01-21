@@ -2,6 +2,8 @@ Run "npm install" to install the node modules
 
 Run "brew services start mongodb" to start the mongo server
 
+Run "npm test" to run all the tests
+
 Run "npm run start" to start the server
 
 Add burritos using the post request in "/api/burrito" using the format {name: "<name>", size: "<size>", price: "<price>"}, eg, {name: "Chicken Burrito", size: "Regular", price: "$3"}
