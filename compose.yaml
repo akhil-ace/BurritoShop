@@ -7,9 +7,13 @@ services:
     image: "node:16"
   mongo:
     container_name: mongo
-    image: mongo:6.0.3
+    image: mongo:latest
     restart: always
     ports:
-      - "27018:27108"
+      - "27017:27017"
     volumes:
-      - /opt/mongodb/data:/data/db
+      - './dockervolume/mongodb:/data/db'
+    links:
+      - "database:burritoshopdb"
+    environment:
+      - DATABASE_URL="mongodb://burritoshopdb:27017"

@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 const port = 4567;
-const URI = 'mongodb://localhost:27017/burrito-shop';
+const URI = 'mongodb://burritoshopdb:27017/burrito-shop';
 mongoose.connect(URI);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
